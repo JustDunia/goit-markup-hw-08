@@ -1,0 +1,71 @@
+.header {
+  padding: 25px 0;
+  border-bottom: 1px solid $headerBorderColor;
+
+  &__content {
+    @extend %flex-sb;
+  }
+
+  .link {
+    transition: color $transitionSet;
+  }
+
+  .link:hover,
+  .link:focus {
+    color: $themeColor;
+  }
+}
+
+.nav {
+  @extend %flex-sb;
+
+  &__list {
+    @extend %flex-sb;
+    gap: 46px;
+  }
+
+  &__item {
+    font-weight: 500;
+    letter-spacing: $letterSpacingSmall;
+  }
+
+  &__link {
+    position: relative;
+
+    &--active {
+      color: $themeColor;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -34px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $themeColor;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.contacts {
+  @extend %flex-sb;
+  gap: 30px;
+
+  &__item {
+    font-weight: 500;
+    letter-spacing: $letterSpacingSmall;
+    color: $fontLighter;
+  }
+
+  &__link {
+    @extend %flex-sb;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    --color4: currentColor;
+  }
+}

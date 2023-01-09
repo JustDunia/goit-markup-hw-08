@@ -1,0 +1,163 @@
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-backdrop {
+  @extend %flex-c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $backgroundTransparent;
+  z-index: 1;
+
+  &.is-hidden {
+    .modal {
+      transform: scale(0);
+    }
+  }
+}
+
+.modal {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  text-align: center;
+  border-radius: $borderRadius;
+  background-color: $white;
+  transition: transform 0.6s;
+
+  &__heading {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  &__send-btn {
+    margin-top: 30px;
+    padding: 10px 76px;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: $letterSpacingBig;
+    color: $white;
+    background-color: $themeColor;
+    box-shadow: $boxShadowDefault;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 5px;
+  border: 1px solid $blackTransparent;
+  border-radius: 50%;
+  background-color: $white;
+  cursor: pointer;
+
+  &__svg {
+    display: block;
+  }
+}
+
+.input-box {
+  &__label {
+    margin-bottom: 4px;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    color: $fontLighter;
+  }
+
+  &__inner {
+    position: relative;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $fontDeafault;
+    transition: fill $transitionSet;
+  }
+
+  &__element {
+    @include borderDefault($inputBorderColor);
+    width: 100%;
+    outline: none;
+    transition: border $transitionSet;
+
+    &:focus {
+      border: 1px solid $themeColor;
+    }
+  }
+
+  &__input {
+    height: 100%;
+    padding-left: 40px;
+  }
+
+  &__textarea {
+    margin-bottom: 20px;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+
+    &::placeholder {
+      font-size: 12px;
+      letter-spacing: 0.01em;
+      color: $fontLighterTransparent;
+    }
+  }
+
+  &:focus-within {
+    .input-box__icon {
+      fill: $themeColor;
+    }
+  }
+}
+
+.statement {
+  &__default-checkbox {
+    position: absolute;
+    height: 15px;
+    width: 16px;
+    opacity: 0;
+
+    &:checked {
+      ~ .statement__checked-checkbox {
+        display: inline-block;
+      }
+      ~ .statement__empty-checkbox {
+        display: none;
+      }
+    }
+  }
+
+  &__empty-checkbox {
+    margin-right: 8px;
+    vertical-align: text-top;
+    fill: $fontDeafault;
+  }
+
+  &__checked-checkbox {
+    display: none;
+    margin-right: 8px;
+    vertical-align: text-top;
+  }
+
+  &__label {
+    color: $fontLighter;
+  }
+
+  &__link {
+    color: $themeColor;
+  }
+}

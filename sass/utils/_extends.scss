@@ -1,0 +1,17 @@
+%flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%section-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  text-align: center;
+}

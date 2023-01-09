@@ -1,0 +1,39 @@
+.hero {
+  background-color: $backgroundDark;
+
+  &__content {
+    @extend %flex-c;
+    padding: 200px 0;
+    margin: 0 auto;
+    max-width: 1600px;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg.jpg');
+  }
+
+  &__heading {
+    margin-bottom: 30px;
+    max-width: 696px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    letter-spacing: $letterSpacingBig;
+    line-height: 1.36;
+    color: $white;
+  }
+
+  &__btn {
+    padding: 10px 41px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: $letterSpacingBig;
+    background-color: $themeColor;
+    color: $white;
+    box-shadow: $boxShadowDefault;
+  }
+}

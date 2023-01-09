@@ -1,0 +1,29 @@
+.clients {
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    @extend %flex-sb;
+  }
+
+  &__icon {
+    --color2: currentColor;
+    --color3: currentColor;
+    transition: color $transitionSet;
+  }
+
+  &__logo {
+    @include borderDefault($iconsInactiveColor);
+    display: block;
+    padding: 16px 32px;
+    color: $iconsInactiveColor;
+    transition: border $transitionSet;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $themeColor;
+      color: $themeColor;
+    }
+  }
+}

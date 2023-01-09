@@ -1,0 +1,84 @@
+.filter {
+  @extend %flex-c;
+  margin-bottom: 50px;
+  gap: 0 8px;
+
+  &__btn {
+    padding: 6px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    background-color: $backgroundLight;
+    transition: background-color $transitionSet, color $transitionSet,
+      box-shadow $transitionSet;
+
+    &:hover,
+    &:focus {
+      background-color: $themeColor;
+      color: $white;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.portfolio-list {
+  @extend %flex-c;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-item {
+  transition: box-shadow $transitionSet;
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    .portfolio-item__overlay {
+      top: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__text {
+    padding: 20px 24px;
+    border: 1px solid $portfolioBorderColor;
+    border-top: none;
+  }
+
+  &__heading {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: $letterSpacingBig;
+  }
+
+  &__category {
+    font-size: 16px;
+    line-height: 1.875;
+    color: $fontLighter;
+  }
+
+  &__image-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 49px 45px 49px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $white;
+    background-color: $themeColorTransparent;
+    transition: top $transitionSet;
+  }
+}
