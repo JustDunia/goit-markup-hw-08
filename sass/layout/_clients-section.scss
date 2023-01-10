@@ -4,19 +4,21 @@
   }
 
   &__list {
-    @extend %flex-sb;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  &__icon {
-    --color2: currentColor;
-    --color3: currentColor;
-    transition: color $transitionSet;
+  &__item {
+    flex-basis: 210px;
   }
 
   &__logo {
     @include borderDefault($iconsInactiveColor);
     display: block;
-    padding: 16px 32px;
+    padding: 16px 0;
+    text-align: center;
     color: $iconsInactiveColor;
     transition: border $transitionSet;
 
@@ -24,6 +26,28 @@
     &:focus {
       border: 1px solid $themeColor;
       color: $themeColor;
+    }
+  }
+
+  &__icon {
+    --color2: currentColor;
+    --color3: currentColor;
+    transition: color $transitionSet;
+  }
+}
+
+@media (width >= 768px) {
+  .clients {
+    // &__title {
+    //   @extend %section-title;
+    // }
+
+    // &__list {
+    //   @extend %flex-sb;
+    // }
+
+    &__logo {
+      padding: 16px 32px;
     }
   }
 }

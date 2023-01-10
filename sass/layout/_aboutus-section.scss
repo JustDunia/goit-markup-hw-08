@@ -1,30 +1,36 @@
 .aboutus {
-  &__title {
-    @extend %section-title;
-  }
-
-  &__list {
-    @extend %flex-sb;
-  }
-
-  &__item {
-    position: relative;
-  }
-
-  &__img {
-    display: block;
-  }
-
-  &__hero {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 27px 0;
-    text-align: center;
-    text-transform: uppercase;
-    color: $white;
-    font-weight: 700;
-    background-color: $backgroundDarkTransparent;
-  }
+  display: none;
 }
+
+// @media (width >= 1200px) {
+//   .aboutus {
+//     &__title {
+//       @extend %section-title;
+//     }
+
+//     &__list {
+//       @extend %flex-sb;
+//     }
+
+//     &__item {
+//       position: relative;
+//     }
+
+//     &__img {
+//       display: block;
+//     }
+
+//     &__hero {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       padding: 27px 0;
+//       text-align: center;
+//       text-transform: uppercase;
+//       color: $white;
+//       font-weight: 700;
+//       background-color: $backgroundDarkTransparent;
+//     }
+//   }
+// }

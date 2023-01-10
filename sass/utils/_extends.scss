@@ -11,7 +11,33 @@
 }
 
 %section-title {
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 28px;
   text-align: center;
 }
+
+%menu-toggler {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: $transitionSet;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $themeColor;
+  }
+}
+
+// %section-title {
+//   margin-bottom: 50px;
+//   font-size: 36px;
+//   text-align: center;
+// }

@@ -1,13 +1,11 @@
 .assets {
-  padding-bottom: 0;
-
-  &__list {
-    display: flex;
-    gap: 30px;
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   &__icon-box {
-    padding: 25px 100px;
+    text-align: center;
+    padding: 25px 0;
     margin-bottom: 30px;
     background-color: $backgroundLight;
     border-radius: $borderRadius;
@@ -15,6 +13,7 @@
 
   &__heading {
     margin-bottom: 10px;
+    text-align: center;
     text-transform: uppercase;
     font-size: 14px;
   }
@@ -22,5 +21,24 @@
   &__text {
     line-height: 1.71;
     color: $fontLighter;
+  }
+}
+
+@media (width >= 768px) {
+  .assets {
+    padding-bottom: 0;
+
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
+
+    &__icon-box {
+      padding: 25px 100px;
+    }
+
+    &__heading {
+      text-align-last: left;
+    }
   }
 }

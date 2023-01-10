@@ -1,11 +1,17 @@
 .logo {
-  margin-right: 93px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   color: $themeColor;
 
   &__partial {
     color: $black;
+  }
+}
+
+@media (width >= 768px){
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
   }
 }

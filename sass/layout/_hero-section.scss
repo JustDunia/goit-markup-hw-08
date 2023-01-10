@@ -2,27 +2,23 @@
   background-color: $backgroundDark;
 
   &__content {
-    @extend %flex-c;
-    padding: 200px 0;
-    margin: 0 auto;
-    max-width: 1600px;
-    flex-direction: column;
+    padding: 118px 40px;
     text-align: center;
     background-image: linear-gradient(
         $backgroundDarkTransparent,
         $backgroundDarkTransparent
       ),
-      url('../images/hero-bg.jpg');
+      url('../images/hero-bg/hero-bg-mobile@1x.jpg');
+    background-size: 480px 400px;
   }
 
   &__heading {
     margin-bottom: 30px;
-    max-width: 696px;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     letter-spacing: $letterSpacingBig;
-    line-height: 1.36;
+    line-height: 1.62;
     color: $white;
   }
 
@@ -35,5 +31,56 @@
     background-color: $themeColor;
     color: $white;
     box-shadow: $boxShadowDefault;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero__content {
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg/hero-bg-mobile@2x.jpg');
+  }
+}
+
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .hero__content {
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg/hero-bg-mobile@3x.jpg');
+  }
+}
+
+@media (width >= 768px) {
+  .hero {
+    background-color: $backgroundDark;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 200px 0;
+      margin: 0 auto;
+      max-width: 1600px;
+      flex-direction: column;
+      background-image: linear-gradient(
+          $backgroundDarkTransparent,
+          $backgroundDarkTransparent
+        ),
+        url('../images/hero-bg.jpg');
+    }
+
+    &__heading {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
