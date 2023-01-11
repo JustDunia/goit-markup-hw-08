@@ -26,6 +26,26 @@
 
 @media (width >= 768px) {
   .assets {
+    padding-bottom: 15px;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 30px;
+    }
+
+    &__item{
+      flex-basis: calc((768px - 60px) /2)
+    }
+
+    &__heading {
+      text-align: left;
+    }
+  }
+}
+
+@media (width >= 1200px) {
+  .assets {
     padding-bottom: 0;
 
     &__list {
@@ -35,10 +55,6 @@
 
     &__icon-box {
       padding: 25px 100px;
-    }
-
-    &__heading {
-      text-align-last: left;
     }
   }
 }

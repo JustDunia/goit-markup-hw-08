@@ -11,6 +11,13 @@
 
 @media (width >= 768px){
   .logo {
+    // margin-right: 83px;
+    font-size: 24px;
+  }
+}
+
+@media (width >= 1200px){
+  .logo {
     margin-right: 93px;
     font-size: 26px;
   }

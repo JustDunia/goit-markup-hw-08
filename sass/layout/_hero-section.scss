@@ -60,6 +60,45 @@
 
 @media (width >= 768px) {
   .hero {
+
+    &__content {
+      padding: 118px 201px;
+      background-image: linear-gradient(
+          $backgroundDarkTransparent,
+          $backgroundDarkTransparent
+        ),
+        url('../images/hero-bg/hero-bg-tablet@1x.jpg');
+      background-size: 768px 400px;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (width >= 768px),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero__content {
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg/hero-bg-tablet@2x.jpg');
+  }
+}
+
+@media (min-device-pixel-ratio: 3) and (width >= 768px),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .hero__content {
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg/hero-bg-tablet@3x.jpg');
+  }
+}
+
+@media (width >= 1200px) {
+  .hero {
     background-color: $backgroundDark;
 
     &__content {
@@ -74,7 +113,8 @@
           $backgroundDarkTransparent,
           $backgroundDarkTransparent
         ),
-        url('../images/hero-bg.jpg');
+        url('../images/hero-bg/hero-bg-tablet@1x.jpg');
+      background-size: 768px 400px;
     }
 
     &__heading {
@@ -82,5 +122,29 @@
       font-size: 44px;
       line-height: 1.36;
     }
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (width >= 768px),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero__content {
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg/hero-bg-tablet@2x.jpg');
+  }
+}
+
+@media (min-device-pixel-ratio: 3) and (width >= 768px),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .hero__content {
+    background-image: linear-gradient(
+        $backgroundDarkTransparent,
+        $backgroundDarkTransparent
+      ),
+      url('../images/hero-bg/hero-bg-tablet@3x.jpg');
   }
 }

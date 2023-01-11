@@ -39,6 +39,12 @@ ul {
 
 @media (width >= 768px) {
   .container {
+    max-width: 768px;
+  }
+}
+
+@media (width >= 1200px) {
+  .container {
     max-width: 1200px;
   }
 

@@ -11,13 +11,13 @@
   }
 
   &__item {
-    flex-basis: 210px;
+    flex-basis: calc((480px - 60px) / 2);
   }
 
   &__logo {
     @include borderDefault($iconsInactiveColor);
     display: block;
-    padding: 16px 0;
+    padding: 16px;
     text-align: center;
     color: $iconsInactiveColor;
     transition: border $transitionSet;
@@ -38,14 +38,14 @@
 
 @media (width >= 768px) {
   .clients {
-    // &__title {
-    //   @extend %section-title;
-    // }
+    &__item {
+      flex-basis: calc((768px - 90px) / 3);
+    }
+  }
+}
 
-    // &__list {
-    //   @extend %flex-sb;
-    // }
-
+@media (width >= 1200px) {
+  .clients {
     &__logo {
       padding: 16px 32px;
     }
