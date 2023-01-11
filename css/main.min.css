@@ -10,7 +10,7 @@
           justify-content: space-between;
 }
 
-.portfolio-list, .filter, .modal-backdrop {
+.modal-backdrop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,11 +786,15 @@ ul {
 }
 
 .filter {
-  margin-bottom: 50px;
-  gap: 0 8px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1.5fr;
+  gap: 15px 8px;
 }
 .filter__btn {
-  padding: 6px 22px;
+  padding: 6px 6px;
+  width: 100%;
+  max-width: 145px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -807,17 +811,14 @@ ul {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-list {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
-
 .portfolio-item {
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 .portfolio-item:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -828,6 +829,7 @@ ul {
 }
 .portfolio-item__img {
   display: block;
+  width: 100%;
 }
 .portfolio-item__text {
   padding: 20px 24px;
@@ -855,7 +857,7 @@ ul {
   width: 100%;
   top: 100%;
   left: 0;
-  padding: 49px 45px 49px 24px;
+  padding: 77px 24px;
   font-size: 18px;
   line-height: 1.56;
   color: #fff;
@@ -864,6 +866,23 @@ ul {
   transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (width >= 768px) {
+  .filter {
+    margin-bottom: 50px;
+    gap: 0 8px;
+  }
+  .filter__btn {
+    padding: 6px 22px;
+  }
+  .portfolio-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+  .portfolio-item__overlay {
+    padding: 49px 45px 49px 24px;
+  }
+}
 .mobile-menu {
   position: fixed;
   top: 0;
