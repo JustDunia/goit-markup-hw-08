@@ -34,8 +34,8 @@
       gap: 0 30px;
     }
 
-    &__item{
-      flex-basis: calc((768px - 60px) /2)
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
     }
 
     &__heading {
@@ -48,13 +48,8 @@
   .assets {
     padding-bottom: 0;
 
-    &__list {
-      display: flex;
-      gap: 30px;
-    }
-
-    &__icon-box {
-      padding: 25px 100px;
+    &__item {
+      flex-basis: calc((100% - 90px) / 4);
     }
   }
 }

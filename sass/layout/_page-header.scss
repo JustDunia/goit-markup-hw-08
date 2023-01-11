@@ -110,21 +110,24 @@
   .header {
     padding: 25px 0;
 
+    &__content {
+      justify-content: initial;
+    }
+
     &__desktop-menu {
-      display: block;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
     }
   }
   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     &__list {
       gap: 46px;
     }
   }
 
   .contacts {
+    margin-left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -132,23 +135,15 @@
 
     &__item {
       font-size: 14px;
-      font-weight: 500;
-      letter-spacing: $letterSpacingSmall;
-      color: $fontLighter;
 
       &:first-child {
         margin-bottom: 0;
       }
     }
 
-    &__link {
-      justify-content: space-between;
-    }
-
     &__icon {
       margin-right: 10px;
-      --color4: currentColor;
-
+     
       &--mail {
         width: 16px;
         height: 12px;

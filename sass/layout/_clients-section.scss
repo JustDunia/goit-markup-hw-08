@@ -11,13 +11,13 @@
   }
 
   &__item {
-    flex-basis: calc((480px - 60px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
 
   &__logo {
     @include borderDefault($iconsInactiveColor);
     display: block;
-    padding: 16px;
+    padding: 13px;
     text-align: center;
     color: $iconsInactiveColor;
     transition: border $transitionSet;
@@ -39,15 +39,19 @@
 @media (width >= 768px) {
   .clients {
     &__item {
-      flex-basis: calc((768px - 90px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
     }
   }
 }
 
 @media (width >= 1200px) {
   .clients {
-    &__logo {
-      padding: 16px 32px;
+    &__title{
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+    &__item {
+      flex-basis: calc((100% - 150px) / 6);
     }
   }
 }

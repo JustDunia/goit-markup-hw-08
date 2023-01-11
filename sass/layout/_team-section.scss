@@ -57,7 +57,7 @@
     }
 
     &__item {
-      flex-basis: calc((768px - 60px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
 
       &:not(:last-child) {
         margin-bottom: 0;
@@ -71,14 +71,10 @@
     &__title {
       margin-bottom: 50px;
       font-size: 36px;
-      text-align: center;
     }
 
-    &__list {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    &__item {
+      flex-basis: calc((100% - 90px) / 4);}
 
     &-member {
       &__text {

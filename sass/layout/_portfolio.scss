@@ -106,7 +106,7 @@
     }
 
     &-item {
-      flex-basis: calc((768px - 60px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
 
       &:not(:last-child) {
         margin-bottom: 0;
@@ -121,30 +121,44 @@
       &__text {
         flex-grow: 1;
       }
+
+      &__overlay {
+        padding: 49px 24px;
+      }
     }
   }
 }
 
 @media (width >= 1200px) {
   .filter {
-    // @extend %flex-c;
+    padding: 0;
     margin-bottom: 50px;
-    gap: 0 8px;
+    justify-content: center;
+
+    &__item {
+      width: auto;
+    }
 
     &__btn {
       padding: 6px 22px;
     }
   }
 
-  .portfolio-list {
-    // @extend %flex-c;
-    flex-wrap: wrap;
-    gap: 30px;
+  .portfolio {
+    &-item {
+      flex-basis: calc((100% - 60px) / 3);
+
+      &__overlay {
+        padding: 49px 45px 49px 24px;
+      }
+    }
   }
 
-  .portfolio-item {
-    &__overlay {
-      padding: 49px 45px 49px 24px;
+  .portfolio {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
     }
   }
 }

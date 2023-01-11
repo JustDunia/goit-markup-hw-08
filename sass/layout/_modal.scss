@@ -74,7 +74,7 @@
 
 .input-box {
   &__label {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     display: block;
     text-align: left;
     font-size: 12px;
@@ -84,7 +84,7 @@
   &__inner {
     position: relative;
     margin-bottom: 10px;
-    height: 40px;
+    height: 42px;
   }
 
   &__icon {
@@ -115,7 +115,7 @@
 
   &__textarea {
     margin-bottom: 20px;
-    height: 120px;
+    height: 122px;
     resize: none;
     padding: 12px 16px;
 
@@ -169,5 +169,18 @@
 
   &__link {
     color: $themeColor;
+  }
+}
+
+@media (width >= 1200px) {
+  .modal {
+    max-width: 528px;
+    width: 100%;
+  }
+
+  .statement {
+    &__label {
+      font-size: 14px;
+    }
   }
 }

@@ -2,35 +2,40 @@
   display: none;
 }
 
-// @media (width >= 1200px) {
-//   .aboutus {
-//     &__title {
-//       @extend %section-title;
-//     }
+@media (width >= 1200px) {
+  .aboutus {
+    display: block;
 
-//     &__list {
-//       @extend %flex-sb;
-//     }
+    &__title {
+      margin-bottom: 50px;
+      font-size: 36px;
+      text-align: center;
+    }
 
-//     &__item {
-//       position: relative;
-//     }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
 
-//     &__img {
-//       display: block;
-//     }
+    &__item {
+      position: relative;
+    }
 
-//     &__hero {
-//       position: absolute;
-//       bottom: 0;
-//       left: 0;
-//       width: 100%;
-//       padding: 27px 0;
-//       text-align: center;
-//       text-transform: uppercase;
-//       color: $white;
-//       font-weight: 700;
-//       background-color: $backgroundDarkTransparent;
-//     }
-//   }
-// }
+    &__img {
+      display: block;
+    }
+
+    &__hero {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 27px 0;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 700;
+      background-color: $backgroundDarkTransparent;
+    }
+  }
+}
