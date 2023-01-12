@@ -3,7 +3,8 @@
   border-bottom: 1px solid $headerBorderColor;
 
   &__content {
-    @extend %flex-sb;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__menu-toggle {
@@ -72,17 +73,11 @@
   }
 
   .contacts {
-    margin-left: 101px;
-
     &__item {
       font-size: 12px;
       font-weight: 500;
       letter-spacing: $letterSpacingSmall;
       color: $fontLighter;
-
-      &:first-child {
-        margin-bottom: 10px;
-      }
     }
 
     &__link {
@@ -106,6 +101,16 @@
   }
 }
 
+@media (1200px > width >= 768px) {
+  .contacts {
+    margin-left: 101px;
+
+    &__item:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 @media (width >= 1200px) {
   .header {
     padding: 25px 0;
@@ -120,14 +125,11 @@
       justify-content: space-between;
     }
   }
-  .nav {
-    &__list {
-      gap: 46px;
-    }
+  .nav__list {
+    gap: 46px;
   }
 
   .contacts {
-    margin-left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -135,15 +137,11 @@
 
     &__item {
       font-size: 14px;
-
-      &:first-child {
-        margin-bottom: 0;
-      }
     }
 
     &__icon {
       margin-right: 10px;
-     
+
       &--mail {
         width: 16px;
         height: 12px;

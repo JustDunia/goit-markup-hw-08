@@ -1,8 +1,4 @@
 .assets {
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
   &__icon-box {
     text-align: center;
     padding: 25px 0;
@@ -13,7 +9,6 @@
 
   &__heading {
     margin-bottom: 10px;
-    text-align: center;
     text-transform: uppercase;
     font-size: 14px;
   }
@@ -21,6 +16,18 @@
   &__text {
     line-height: 1.71;
     color: $fontLighter;
+  }
+}
+
+@media (width < 768px){
+  .assets__heading {
+    text-align: center;
+  }
+}
+
+@media (width < 1200px) {
+  .assets__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -37,17 +44,13 @@
     &__item {
       flex-basis: calc((100% - 30px) / 2);
     }
-
-    &__heading {
-      text-align: left;
-    }
   }
 }
 
 @media (width >= 1200px) {
   .assets {
     padding-bottom: 0;
-
+    
     &__item {
       flex-basis: calc((100% - 90px) / 4);
     }

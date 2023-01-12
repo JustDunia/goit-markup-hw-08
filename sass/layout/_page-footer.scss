@@ -3,7 +3,6 @@
 
   &__content {
     padding: 60px 15px;
-    text-align: center;
   }
 }
 
@@ -13,7 +12,6 @@
 
 .address {
   margin-top: 20px;
-  margin-bottom: 60px;
   font-style: normal;
   line-height: 1.71;
 
@@ -44,7 +42,6 @@
   }
 
   & .social-icons {
-    margin-bottom: 60px;
     justify-content: center;
   }
 
@@ -67,7 +64,6 @@
     @include borderDefault($borderTransparent);
     display: block;
     padding: 15px;
-    margin-bottom: 20px;
     width: 100%;
     color: $white;
     background-color: $backgroundDark;
@@ -95,9 +91,30 @@
   }
 }
 
+@media (width < 768px) {
+  .newsletter__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media (width < 1200px) {
+  .footer__content {
+    text-align: center;
+  }
+
+  .address {
+    margin-bottom: 60px;
+  }
+
+  .joinus {
+    & .social-icons {
+      margin-bottom: 60px;
+    }
+  }
+}
+
 @media (width >= 768px) {
   .footer__subcontainer {
-    padding: 0 61px;
     display: flex;
     justify-content: space-between;
   }
@@ -106,11 +123,17 @@
     padding: 5px 13px;
   }
 
-  .newsletter {
-    &__input {
-      width: 450px;
-      margin: 0 auto 20px;
-    }
+  .newsletter__input {
+    width: 450px;
+  }
+}
+
+@media (1200px > width >=768px) {
+  .footer__subcontainer {
+    padding: 0 61px;
+  }
+  .newsletter__input {
+    margin: 0 auto 20px;
   }
 }
 
@@ -118,24 +141,11 @@
   .footer {
     &__content {
       display: flex;
-      text-align: left;
     }
-
-    &__subcontainer {
-      padding: 0;
-    }
-  }
-
-  .address {
-    margin-bottom: 0;
   }
 
   .joinus {
     padding: 12px 78px 0 70px;
-
-    & .social-icons {
-      margin-bottom: 0;
-    }
   }
 
   .newsletter {
@@ -147,24 +157,7 @@
     }
 
     &__input {
-      margin: 0;
       width: 358px;
-    }
-
-    &__btn {
-      padding: 10px 28px 10px 42px;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.875;
-      letter-spacing: $letterSpacingBig;
-      color: $white;
-      background-color: $themeColor;
-      box-shadow: $boxShadowDefault;
-    }
-
-    &__send-icon {
-      margin-left: 24px;
-      vertical-align: middle;
     }
   }
 }

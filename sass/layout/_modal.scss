@@ -5,7 +5,9 @@
 }
 
 .modal-backdrop {
-  @extend %flex-c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +63,6 @@
 
   &__svg {
     display: block;
-    transition: $transitionSet;
   }
 
   &:hover,
