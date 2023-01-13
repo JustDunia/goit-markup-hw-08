@@ -4,8 +4,6 @@
   grid-template-columns: 0.8fr 1fr 1.5fr;
   gap: 15px 8px;
 
-  // wiem, że to nietypowe rozwiązanie z gridem, ale wg makiety dla widoku mobilnego, każdy z przycisków ma inne paddingi, inne wymiary, każdy trzeba byłoby oddzielnie stylizować
-
   &__btn {
     padding: 6px 6px;
     width: 100%;
@@ -29,6 +27,10 @@
 
 .portfolio-item {
   transition: box-shadow $transitionSet;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -91,12 +93,6 @@
   }
 }
 
-@media (width < 768px) {
-  .portfolio-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
 @media (width >= 768px) {
   .filter {
     display: flex;
@@ -108,6 +104,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+
+  .portfolio-item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 

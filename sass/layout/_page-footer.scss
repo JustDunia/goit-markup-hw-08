@@ -3,6 +3,7 @@
 
   &__content {
     padding: 60px 15px;
+    text-align: center;
   }
 }
 
@@ -12,6 +13,7 @@
 
 .address {
   margin-top: 20px;
+  margin-bottom: 60px;
   font-style: normal;
   line-height: 1.71;
 
@@ -42,6 +44,7 @@
   }
 
   & .social-icons {
+    margin-bottom: 60px;
     justify-content: center;
   }
 
@@ -62,6 +65,7 @@
 
   &__input {
     @include borderDefault($borderTransparent);
+    margin-bottom: 20px;
     display: block;
     padding: 15px;
     width: 100%;
@@ -88,28 +92,6 @@
   &__send-icon {
     margin-left: 24px;
     vertical-align: middle;
-  }
-}
-
-@media (width < 768px) {
-  .newsletter__input {
-    margin-bottom: 20px;
-  }
-}
-
-@media (width < 1200px) {
-  .footer__content {
-    text-align: center;
-  }
-
-  .address {
-    margin-bottom: 60px;
-  }
-
-  .joinus {
-    & .social-icons {
-      margin-bottom: 60px;
-    }
   }
 }
 
@@ -141,11 +123,20 @@
   .footer {
     &__content {
       display: flex;
+      text-align: left;
     }
+  }
+
+  .address {
+    margin-bottom: 0;
   }
 
   .joinus {
     padding: 12px 78px 0 70px;
+
+    & .social-icons {
+      margin-bottom: 0;
+    }
   }
 
   .newsletter {
@@ -157,6 +148,7 @@
     }
 
     &__input {
+      margin-bottom: 0;
       width: 358px;
     }
   }

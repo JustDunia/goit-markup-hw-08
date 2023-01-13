@@ -49,7 +49,7 @@
   }
 
   &__phone {
-    font-size: 34px;
+    font-size: 30px;
     color: $themeColor;
   }
 
@@ -62,7 +62,7 @@
 .mobile-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 0;
+  gap: 16px 0;
 
   &__item {
     font-size: 18px;
@@ -70,19 +70,61 @@
     letter-spacing: $letterSpacingSmall;
     color: $themeColor;
 
-    &:not(:first-child) {
-      padding-left: 10px;
-      border-left: 1px solid $inputBorderColor;
+    &--instagram,
+    &--facebook {
+      padding-right: 10px;
+      border-right: 1px solid $inputBorderColor;
     }
 
-    &:not(:last-child) {
+    &--twitter,
+    &--linkedin {
+      padding-left: 10px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (width > 367px) {
+  .mobile-socials__item {
+    &--twitter {
       padding-right: 10px;
+      border-right: 1px solid $inputBorderColor;
+    }
+
+    &--facebook {
+      padding-left: 10px;
+      padding-right: 20px;
+      border-right: none;
+    }
+
+    &--linkedin {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (width > 468px) {
+  .mobile-socials__item {
+    &--facebook {
+      padding-left: 10px;
+      padding-right: 10px;
+      border-right: 1px solid $inputBorderColor;
+    }
+
+    &--linkedin {
+      padding-left: 10px;
     }
   }
 }
 
 @media (width> 480px) {
-  .mobile-menu{
+  .mobile-menu {
     padding-left: 10vw;
+  }
+
+  .mobile-contacts {
+    &__phone {
+      font-size: 34px;
+    }
   }
 }
